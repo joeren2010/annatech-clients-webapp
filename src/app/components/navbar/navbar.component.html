@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid">
+      <a class="navbar-brand" href="#">eCommerce Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Categories
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="/products/clothings">Clothings</a>
+                  <a class="dropdown-item" routerLink="/products/computers">Computers</a>
+                  <a class="dropdown-item" routerLink="/products/electronics">Electronics</a>
+                  <a class="dropdown-item" routerLink="/products/furnitures">Furnitures</a>
+                  <a class="dropdown-item" routerLink="/products/grocery">Grocery</a>
+                  <a class="dropdown-item" routerLink="/products/jewelry">Jewelry</a>
+               </div>
+            </li>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/about">About Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/cart">My Cart
+                     <span class="badge badge-light ml-1" *ngIf="productsService.products.length !== 0">
+                        {{productsService.products.length || 0 }}</span>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/wishlist">Wishlist
+                     <span class="badge badge-light ml-1" *ngIf="productsService.wishlistProducts.length !== 0">
+                        {{productsService.wishlistProducts.length || 0 }}</span>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/orders">Orders</a>
+               </li>
+            </ul>
+         </ul>
+         <ul class="navbar-nav ml-auto mr-15">
+            <form class="d-flex">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" routerLink="/account" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-expanded="false">
+                  <strong> My Account </strong>
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="/auth/login">Login</a>
+                  <a class="dropdown-item" routerLink="/auth/register">Register</a>
+                  <a class="dropdown-item" routerLink="/auth/change-password">Change Password</a>
+                  <a class="dropdown-item" routerLink="/account/my-orders">My Orders</a>
+                  <a class="dropdown-item" routerLink="/account/my-profile">My Profile</a>
+                  <a class="dropdown-item" routerLink="/account/payments">Payment Info</a>
+                  <a class="dropdown-item" routerLink="/account/preferences">Preferences</a>
+                  <a class="dropdown-item" routerLink="/auth/login">Logout</a>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+
+
+
+<!-- 
+<li class="nav-item">
+   <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+</li> 
+-->
+<!-- <li class="nav-item">
+   <a class="nav-link" routerLink="/products">Products</a>
+</li> -->
+
+<!-- 
+<li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" routerLink="/products" id="navbarDropdown" role="button"
+      data-toggle="dropdown" aria-expanded="false">
+      Products
+   </a>
+   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" routerLink="#">Create</a></li>
+      <li><a class="dropdown-item" routerLink="#">Update</a></li>
+      <li>
+         <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" routerLink="#">View</a></li>
+   </ul>
+</li> 
+-->
